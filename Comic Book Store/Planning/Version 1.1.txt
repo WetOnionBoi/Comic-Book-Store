@@ -1,0 +1,113 @@
+Task 0 : Explain what you are doing/ going to accomplish 
+
+We are going to create a python server for a comic book website.
+
+
+
+Task 1: Sketch interface design 
+
+Draft a rough design for the interface that allows the user to trigger functionality in task 1, while also annotating where the information in task 2 will be displayed. Create another sketch listing the interface widgets used to create the interface. 
+
+N/A
+
+
+
+Task 2: Identify any classes required 
+
+Explain what the class will represent, plus listing what information will be stored in the class and any functions the class will have. 
+
+Class for the Comics we're using
+
+name and amount 
+-used for comics
+
+
+Task 3: Identify information to be displayed 
+
+What information will the interface need to display to the user? 
+
+N/A
+
+
+Task 4: Identify user inputs 
+
+What program functions can the user trigger through the interface? 
+
+N/A
+
+
+Task 5: Identify any constants or existing data if required 
+
+N/A
+
+
+Task 6: Identify indexed data structures  
+
+The list of test data will be:
+	Super Dude - Starting with 8 in stock 
+
+	Lizard Man - Starting with 12 in stock 
+
+	Water Woman - Starting with 3 in stock 	
+
+
+
+Task 7: Determine what calculations are necessary 
+
+Write out the calculations the program will have to compute. 
+
+N/A
+
+
+
+Task 8: Develop a modular structure for your program 
+
+Only function needed is __init__ for our class
+
+Describe any functions that the computer program will have, identifying any sub-functions where required.  
+
+
+
+Task 9: Define the functions identified 
+
+Describe the functions for both the main program and any classes in terms of input and/or output where required. You may choose to do this with flow charts or pseudo-code (not Python code!). Add in additional steps or explanations using sequential, conditional, iterative statements where required. Identify global and/or local variables. 
+
+IMPORT run, route, view, get, post, FROM bottle
+IMPORT count FROM itertools
+
+CLASS Comic: 
+	PROGRAM __init__: pass self, name, stock
+		SET self.id to next self._ids
+		SET self.comic_name to name
+		SET self.comic_amount to stock
+	END
+
+	SET LIST to comics
+		Comic is set to Super Dude, 8 
+		Comic is set to Lizard Man, 12 
+		Comic is set to Water Woman, 3 
+
+		
+run(host='0.0.0.0', port = 8080, reloader=True, debug=True)
+		
+
+
+Task 10: Address any relevant implications such as usability, functionality, legal/ethical requirements. 
+
+Comments will be added to my code to make it easier to read and easier for other developers to understand it.
+
+
+
+Task 11: Document test cases for testing the program 
+
+Document any testing that can be used to test your program. If any input is inputted using the keyboard, describe the expected input, plus any exceptional, boundary or invalid cases. 
+
+Code runs. Cant test further as we havent created the UI for the website yet
+
+Task 12: Refine the plan 
+
+Note any modifications here when iterating through the development cycles. 
+
+Task 13: Document testing 
+
+Show screenshots of your program working with descriptions of each image. These images should test the tests cases listed above. 
