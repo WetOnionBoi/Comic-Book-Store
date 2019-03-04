@@ -5,36 +5,25 @@ from bottle import run, route, view, get, post, request
 from itertools import count
 
 
-class Ticket:
+class Comic:
 
     #signifies a private variable. not to be used outside of this class.
     _ids = count (0)
 
-    def __init__():
+    def __init__(self, comic_name, Comic_stock):
         #not passing ID as we want it to create it.
         self.id = next(self._ids)
-        self.name = name
-        self.email =  email
-        self.dob = date_of_birth
-        self.check_in = check_in
-
+        self.comic_name = name
+        self.comic_stock = stock
 
 
 
     #Test Data
-tickets = [
-          Ticket("Super Dude", 8),
-          Ticket("Lizard Man",  12),
-          Ticket("Water Woman", 3)
+comics  = [
+          Comic("Super Dude", 8),
+          Comic("Lizard Man",  12),
+          Comic("Water Woman", 3)
           ]
-
-#Pages
-
-#index page
-@route("/")
-@view("Index")
-def index():
-    pass
 
 
 #bottom of code
