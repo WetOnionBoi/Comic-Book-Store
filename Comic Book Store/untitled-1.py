@@ -1,4 +1,4 @@
-    #Ver 1.1 Created test data for ticket variable and added server functionality
+    #Ver 1.1 Created test data for comic store variable and added server functionality
         
 
 from bottle import run, route, view, get, post, request
@@ -10,11 +10,11 @@ class Comic:
     #signifies a private variable. not to be used outside of this class.
     _ids = count (0)
 
-    def __init__(self, comic_name, Comic_stock):
+    def __init__(self, comic_name, comic_stock):
         #not passing ID as we want it to create it.
         self.id = next(self._ids)
-        self.comic_name = name
-        self.comic_stock = stock
+        self.name = comic_name
+        self.stock = comic_stock
 
 
 
@@ -24,6 +24,13 @@ comics  = [
           Comic("Lizard Man",  12),
           Comic("Water Woman", 3)
           ]
+
+#index page
+@route("/")
+@view("index")
+def index():
+    #need this function to attach the decorators above.
+    pass
 
 
 #bottom of code
