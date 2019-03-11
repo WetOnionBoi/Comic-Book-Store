@@ -20,9 +20,9 @@ class Comic:
 
     #Test Data
 comics  = [
-          Comic("Super Dude", 8),
-          Comic("Lizard Man",  12),
-          Comic("Water Woman", 3)
+          Comic("Super-Dude", 8),
+          Comic("Lizard-Man",  12),
+          Comic("Water-Woman", 3)
           ]
 
 #index page
@@ -31,6 +31,19 @@ comics  = [
 def index():
     #need this function to attach the decorators above.
     pass
+
+@route('/comics')
+@view('comics')
+def comics():
+    data = dict (comic_list = Comic)
+    return data
+
+
+@route('/picture/<filename>')
+def serve_picture():
+    return static_file(filename, root = './images')
+
+
 
 
 #bottom of code
