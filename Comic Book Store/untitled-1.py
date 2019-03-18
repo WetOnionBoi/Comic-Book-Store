@@ -41,6 +41,15 @@ def sell_comics():
     data = dict (comics_list=comics)
     return data
 
+@route('/buy_comics')
+@view('buy_comics')
+def buy_comics():
+    pass
+
+@route('/comic_bought', method = 'POST')
+@view('comic_bought')
+def comic_bought():
+    pass
 
 @route('/picture/<filename>')
 def serve_picture(filename):
