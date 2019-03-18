@@ -1,7 +1,7 @@
     #Ver 1.1 Created test data for comic store variable and added server functionality
         
 
-from bottle import run, route, view, get, post, request
+from bottle import run, route, view, get, post, request, static_file
 from itertools import count
 
 
@@ -18,13 +18,15 @@ class Comic:
         self.stock = comic_stock
 
 
-
     #Test Data
 comics  = [
           Comic("Super-Dude","Superd.jpg", 8),
           Comic("Lizard-Man","lizard.jpg",  12),
-          Comic("Water-Woman","waterwoman.png", 3)
+          Comic("Water-Woman","Waterwoman.jpg", 3)
           ]
+
+
+
 
 #index page
 @route("/")
@@ -41,8 +43,8 @@ def sell_comics():
 
 
 @route('/picture/<filename>')
-def serve_picture():
-    return static_file(filename, root = './images')
+def serve_picture(filename):
+    return static_file(filename, root = './Images')
 
 
 
