@@ -35,21 +35,23 @@ def index():
     #need this function to attach the decorators above.
     pass
 
-@route('/sell_comics')
-@view('sell_comics')
+@route('/comic_info')
+@view('comic_info')
 def sell_comics():
-    data = dict (comics_list=comics)
+    data = dict(comics_list = comics)
     return data
 
-@route('/buy_comics')
-@view('buy_comics')
-def buy_comics():
-    pass
-
-@route('/comic_bought', method = 'POST')
+@route('/comic_bought/<comic_id>', method = 'POST')
 @view('comic_bought')
 def comic_bought():
-    pass
+    comic_id = int(comic_id)
+    found_comic = None
+    for comic in comics: 
+        if comic.id == comic_id:
+            found_comic  = comic
+    data = dict(comic = found_comic)
+    found_comic.stock = found_comic.stock - 1   #minus 1 from the amount of comics in stock
+    return data 
 
 @route('/picture/<filename>')
 def serve_picture(filename):
