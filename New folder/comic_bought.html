@@ -8,9 +8,9 @@
         <span class="card-title">Congratulations!</span>
         <p>Your comics will be shipped to you within 7 working days</p>
 		<a href="/comic_info">Return to comic info</a>
-		%if comics.stock == 0:
-			%comics.stock += 1
-			stock_out_back -= 1
+		%if comic.stock == -1:
+			%comic.stock += 1
+			
 		
 		</div>
       </div>
